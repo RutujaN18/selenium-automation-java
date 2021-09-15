@@ -46,7 +46,7 @@ public class AddUserPage {
 		confirmPassword.sendKeys(strPassword1);
 		saveButton.click();
 
-		return new AdminPage().isPageLoaded();
+		return new AdminPage();
 
 	}
 
