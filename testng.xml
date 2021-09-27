@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Orange_hrm">
-  <test thread-count="5" name="Regestiontest">
+  <test thread-count="5" name="RegressionTest" parallel="methods">
     <classes>
       <class name="test2.Login1"/>
       <class name="test2.AddUserTest"/>
     </classes>
-  </test> <!-- Regestiontest -->
+  </test> <!-- RegressionTest -->
 </suite> <!-- Orange_hrm -->

@@ -17,13 +17,13 @@ public class AddUserTest {
 
 		new Loginpage1().login("Admin", "admin123")
 
-				.verifyWelcomeText("Welcome Paul")
+				.verifyWelcomeText("Welcome Ram")
 
 				.navigatetoAdminPage()
 
 				.navigateToAddUserPage()
 
-				.AddUser("Charlie Carter", "charliecenter@1234AjR1985079812345", "Enabled", "charliecenter@12345678","charliecenter@12345678");
+				.AddUser("Charlie Carter", "charliecenter@1234AjR19850798", "Enabled", "charliecenter@12345678","charliecenter@12345678");
 		
 		         System.out.println("Hello");
 

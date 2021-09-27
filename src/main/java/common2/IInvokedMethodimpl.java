@@ -1,5 +1,6 @@
 package common2;
 
+import java.awt.event.InputMethodListener;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,7 +10,7 @@ import org.testng.ITestResult;
 
 import common2.WebDriverFactory2;
 
-public class IInvokedMethodimpl implements IInvokedMethodListener {
+public abstract class IInvokedMethodimpl implements InputMethodListener {
 
 	public void afterInvocation(IInvokedMethod method, ITestResult testResult) {
 		WebDriverFactory2.threadStorage.get().quit();

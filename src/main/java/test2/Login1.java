@@ -15,7 +15,7 @@ public class Login1 {
 	public void verifyuseridpassword() {
 
 		Loginpage1 lp = new Loginpage1();
-		lp.login("Admin", "admin123").verifyWelcomeText("Welcome Paul");
+		lp.login("Admin", "admin123").verifyWelcomeText("Welcome Ram");
 
 	}
 
