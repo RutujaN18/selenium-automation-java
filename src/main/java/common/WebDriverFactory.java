@@ -1,10 +1,10 @@
-package common2;
+package common;
 
 import org.openqa.selenium.WebDriver;
 
-import common2.WebDriverFactory2;
+import common.WebDriverFactory;
 
-public class WebDriverFactory2 {
+public class WebDriverFactory {
 
 	public static ThreadLocal<WebDriver> threadStorage = new ThreadLocal<>();
 

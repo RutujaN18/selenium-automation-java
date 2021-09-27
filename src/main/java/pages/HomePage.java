@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-import common2.WebDriverFactory2;
+import common.WebDriverFactory;
 
 public class HomePage {
 
@@ -24,8 +24,8 @@ public class HomePage {
 
 	public HomePage() // constructor
 	{
-		PageFactory.initElements(WebDriverFactory2.threadStorage.get(), this);
-		wait = new WebDriverWait(WebDriverFactory2.threadStorage.get(), 20);
+		PageFactory.initElements(WebDriverFactory.threadStorage.get(), this);
+		wait = new WebDriverWait(WebDriverFactory.threadStorage.get(), 20);
 
 	}
 

@@ -1,12 +1,12 @@
-package test2;
+package testcase;
 
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import common2.IInvokedMethodimpl;
+import common.IInvokedMethodimpl;
 import pages.AddUserPage;
 import pages.HomePage;
-import pages.Loginpage1;
+import pages.LoginPage;
 import pages.AdminPage;
 
 @Listeners(IInvokedMethodimpl.class)
@@ -15,7 +15,7 @@ public class AddUserTest {
 	@Test
 	public void verifyAdminUserGettingAddedSuccessfully() {
 
-		new Loginpage1().login("Admin", "admin123")
+		new LoginPage().login("Admin", "admin123")
 
 				.verifyWelcomeText("Welcome Ram")
 
@@ -23,9 +23,10 @@ public class AddUserTest {
 
 				.navigateToAddUserPage()
 
-				.AddUser("Charlie Carter", "charliecenter@1234AjR19850798", "Enabled", "charliecenter@12345678","charliecenter@12345678");
+				.AddUser("Charlie Carter", "charliecenter@123498"+  System.currentTimeMillis(), "Enabled", "charliecenter@12345678","charliecenter@12345678");
 		
 		         System.out.println("Hello");
+		       
 
 	}
 }

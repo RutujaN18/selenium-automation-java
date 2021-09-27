@@ -6,7 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import common2.WebDriverFactory2;
+import common.WebDriverFactory;
 
 public class AddUserPage {
 
@@ -31,8 +31,8 @@ public class AddUserPage {
 	private WebDriverWait wait;
 
 	public AddUserPage() {
-		PageFactory.initElements(WebDriverFactory2.threadStorage.get(), this);
-		wait = new WebDriverWait(WebDriverFactory2.threadStorage.get(), 30);
+		PageFactory.initElements(WebDriverFactory.threadStorage.get(), this);
+		wait = new WebDriverWait(WebDriverFactory.threadStorage.get(), 30);
 
 	}
 

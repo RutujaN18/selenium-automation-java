@@ -3,8 +3,8 @@
 <suite name="Orange_hrm">
   <test thread-count="5" name="RegressionTest" parallel="methods">
     <classes>
-      <class name="test2.Login1"/>
-      <class name="test2.AddUserTest"/>
+      <class name="test.LoginTest"/>
+      <class name="test.AddUserTest"/>
     </classes>
   </test> <!-- RegressionTest -->
 </suite> <!-- Orange_hrm -->

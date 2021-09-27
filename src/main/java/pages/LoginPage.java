@@ -6,9 +6,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-import common2.WebDriverFactory2;
+import common.WebDriverFactory;
 
-public class Loginpage1 {
+public class LoginPage {
 	@FindBy(id = "txtUsername")
 	private WebElement Username;
 
@@ -23,10 +23,10 @@ public class Loginpage1 {
 
 	private WebDriverWait wait; // declaration
 
-	public Loginpage1() // constructor
+	public LoginPage() // constructor
 	{
-		PageFactory.initElements(WebDriverFactory2.threadStorage.get(), this);
-		wait = new WebDriverWait(WebDriverFactory2.threadStorage.get(), 20);
+		PageFactory.initElements(WebDriverFactory.threadStorage.get(), this);
+		wait = new WebDriverWait(WebDriverFactory.threadStorage.get(), 20);
 
 	}
 
@@ -52,13 +52,13 @@ public class Loginpage1 {
 
 	}
 
-	public Loginpage1 adminincorrectpassword(String strUserName, String strPassword, String strExpectedErrorMessage)
+	public LoginPage adminincorrectpassword(String strUserName, String strPassword, String strExpectedErrorMessage)
 
 	{
 		Username.sendKeys(strUserName);
 		password.sendKeys(strPassword);
 		loginButton.click();
 		Assert.assertEquals(errorMessage.getText().contains(strExpectedErrorMessage), true);
-		return new Loginpage1();
+		return new LoginPage();
 	}
 }

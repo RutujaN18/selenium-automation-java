@@ -7,17 +7,18 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-import common2.WebDriverFactory2;
+import common.WebDriverFactory;
 
 public class AdminPage {
 
 	@FindBy(id = "btnAdd")
 	WebElement addUserButton;
+	
 	private WebDriverWait wait;
 
 	public AdminPage() {
-		PageFactory.initElements(WebDriverFactory2.threadStorage.get(), this);
-		wait = new WebDriverWait(WebDriverFactory2.threadStorage.get(), 20);
+		PageFactory.initElements(WebDriverFactory.threadStorage.get(), this);
+		wait = new WebDriverWait(WebDriverFactory.threadStorage.get(), 20);
 		isPageLoaded();
 
 	}
